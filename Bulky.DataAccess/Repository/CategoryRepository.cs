@@ -2,7 +2,7 @@
 using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models;
 
-namespace Bulky.DataAccess.Repository
+namespace BulkyBook.DataAccess.Repository
 {
     public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
@@ -11,11 +11,6 @@ namespace Bulky.DataAccess.Repository
         public CategoryRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
-        }
-
-        public void Save()
-        {
-            _db.SaveChanges();
         }
 
         public void update(Category obj)
