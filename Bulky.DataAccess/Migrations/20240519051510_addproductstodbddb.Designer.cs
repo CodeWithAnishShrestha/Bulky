@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Bulky.DataAccess.Migrations
+namespace BulkyBook.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240517090658_addforeignkeyyy")]
-    partial class addforeignkeyyy
+    [Migration("20240519051510_addproductstodbddb")]
+    partial class addproductstodbddb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -193,13 +193,13 @@ namespace Bulky.DataAccess.Migrations
 
             modelBuilder.Entity("BulkyBook.Models.Models.Product", b =>
                 {
-                    b.HasOne("Bulky.Models.Category", "category")
+                    b.HasOne("Bulky.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("category");
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

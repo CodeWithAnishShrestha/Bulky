@@ -46,7 +46,6 @@ namespace Bulky.DataAccess.Data
                     Price = 30,
                     Price50 = 25,
                     Price100 = 20,
-
                     CategoryId = 1
                 },
                 new Product
